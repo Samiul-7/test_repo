@@ -1,0 +1,127 @@
+/* Navbar.css */
+
+/* Base styles for the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styles */
+.logo {
+  height: 45px;
+  cursor: pointer;
+}
+
+/* Right section of the navbar */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Icon styles within the right section */
+.navbar-right img {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.navbar-right img:hover {
+  transform: scale(1.1);
+}
+
+/* Search icon with a notification dot */
+.navbar-search-icon {
+  position: relative;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ff4757;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+
+/* Button styles */
+button {
+  padding: 8px 15px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Profile section within the navbar */
+.navbar-profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-profile img {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Dropdown menu for the profile section */
+.nav-profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 180px;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+/* Dropdown list items */
+.nav-profile-dropdown li {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-profile-dropdown li img {
+  width: 22px;
+  height: 22px;
+  margin-right: 12px;
+}
+
+.nav-profile-dropdown li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Divider within the dropdown menu */
+.nav-profile-dropdown hr {
+  margin: 0;
+  border: none;
+  border-top: 1px solid #e9ecef;
+}
+
+/* Show dropdown on profile hover */
+.navbar-profile:hover .nav-profile-dropdown {
+  display: flex;
+}

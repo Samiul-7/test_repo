@@ -1,0 +1,102 @@
+/* Overall form styling */
+.place-order {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsive design */
+    margin: 2rem auto; /* Add some margin for spacing */
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* Left section (delivery information) */
+  .place-order-left {
+    flex: 1 1 50%; /* Take up half the space */
+    padding: 1rem;
+  }
+  
+  .place-order-left .title {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .place-order-left .multi-fields {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between; /* Distribute inputs evenly */
+  }
+  
+  .place-order-left input[type="text"],
+  .place-order-left input[type="email"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+  
+  /* Right section (cart total) */
+  .place-order-right {
+    flex: 1 1 50%; /* Take up half the space */
+    padding: 1rem;
+    border-left: 1px solid #ddd;
+  }
+  
+  .cart-total {
+    text-align: center; /* Center cart total content */
+  }
+  
+  .cart-total h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .cart-total-details {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between; /* Align labels and values */
+  }
+  
+  .cart-total-details p {
+    font-weight: normal;
+  }
+  
+  .cart-total-details b {
+    font-weight: bold;
+  }
+  
+  /* Button styling */
+  .place-order button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* Indicate clickable button */
+  }
+  
+  .place-order button:hover {
+    background-color: #444; /* Subtle hover effect */
+  }
+  
+  /* Additional considerations for responsiveness and accessibility (optional) */
+  
+  /* Media queries for different screen sizes */
+  @media (max-width: 768px) {
+    .place-order {
+      flex-direction: column; /* Stack elements vertically on small screens */
+    }
+  
+    .place-order-left,
+    .place-order-right {
+      flex: 1 0 100%; /* Take up full width on small screens */
+    }
+  }
+  
+  /* Focus styles for accessibility */
+  .place-order-left input:focus,
+  .place-order-right button:focus {
+    outline: 2px solid #007bff; /* Blue outline for focused elements */
+  }
+  
